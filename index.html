@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recursos Gratuitos para Emprendedores · Ferova Agency</title>
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230d1b2a'/><text y='.9em' font-size='70' x='12'>🚀</text></svg>">
+
+<meta name="description" content="Herramientas gratuitas para emprendedores digitales. Calculadoras, diagnósticos y simuladores creados por Ferova Agency.">
+<meta property="og:title" content="Recursos gratuitos para emprendedores · Ferova Agency">
+<meta property="og:description" content="Calculadoras y herramientas para tomar mejores decisiones en tu negocio digital.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ferova Agency">
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy: #0d1b2a;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --white: #ffffff;
+    --text-muted: #7a8a9a;
+    --border: rgba(201,168,76,0.2);
+    --radius: 16px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 50% at 10% 0%, rgba(201,168,76,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 70% at 90% 100%, rgba(201,168,76,0.05) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+
+  /* Nav */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 72px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .logo-dot {
+    width: 8px; height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+
+  .logo span {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 0.5px solid var(--border);
+    border-radius: 100px;
+    transition: all 0.2s;
+  }
+
+  .nav-cta:hover {
+    color: var(--gold-light);
+    border-color: rgba(201,168,76,0.5);
+    background: rgba(201,168,76,0.06);
+  }
+
+  /* Hero */
+  .hero {
+    text-align: center;
+    margin-bottom: 64px;
+    animation: fadeUp 0.5s ease both;
+  }
+
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    padding: 6px 16px;
+    border: 0.5px solid var(--border);
+    border-radius: 100px;
+    background: rgba(201,168,76,0.06);
+    margin-bottom: 28px;
+  }
+
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(36px, 6vw, 60px);
+    line-height: 1.08;
+    margin-bottom: 20px;
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .hero-sub {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .divider {
+    width: 48px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 24px auto;
+  }
+
+  /* Grid de herramientas */
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .tool-card {
+    background: rgba(255,255,255,0.03);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: all 0.22s;
+    animation: fadeUp 0.4s ease both;
+  }
+
+  .tool-card:nth-child(1) { animation-delay: 0.1s; }
+  .tool-card:nth-child(2) { animation-delay: 0.18s; }
+  .tool-card:nth-child(3) { animation-delay: 0.26s; }
+  .tool-card:nth-child(4) { animation-delay: 0.34s; }
+
+  .tool-card:hover {
+    background: rgba(201,168,76,0.06);
+    border-color: rgba(201,168,76,0.4);
+    transform: translateY(-2px);
+  }
+
+  .tool-card.coming-soon {
+    opacity: 0.45;
+    pointer-events: none;
+  }
+
+  .tool-icon {
+    font-size: 28px;
+    line-height: 1;
+  }
+
+  .tool-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 100px;
+    width: fit-content;
+  }
+
+  .badge-free {
+    background: rgba(46,204,138,0.12);
+    color: #2ecc8a;
+  }
+
+  .badge-soon {
+    background: rgba(201,168,76,0.12);
+    color: var(--gold);
+  }
+
+  .tool-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    line-height: 1.2;
+    color: var(--white);
+  }
+
+  .tool-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    flex: 1;
+  }
+
+  .tool-cta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gold);
+    margin-top: 4px;
+  }
+
+  .arrow {
+    transition: transform 0.2s;
+  }
+
+  .tool-card:hover .arrow {
+    transform: translateX(4px);
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding-top: 48px;
+    border-top: 0.5px solid var(--border);
+  }
+
+  .footer p {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+  }
+
+  .wa-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--white);
+    background: rgba(37,211,102,0.12);
+    border: 0.5px solid rgba(37,211,102,0.3);
+    border-radius: 100px;
+    padding: 10px 22px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .wa-btn:hover {
+    background: rgba(37,211,102,0.2);
+    border-color: rgba(37,211,102,0.5);
+  }
+
+  .footer-copy {
+    margin-top: 28px;
+    font-size: 12px;
+    color: rgba(122,138,154,0.5);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 480px) {
+    .tools-grid { grid-template-columns: 1fr; }
+    nav { flex-direction: column; gap: 16px; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <nav>
+    <a class="logo" href="#">
+      <div class="logo-dot"></div>
+      <span>Ferova Agency</span>
+    </a>
+    <a class="nav-cta" href="https://wa.me/17865787672" target="_blank">
+      ¿Necesitas una WebApp? →
+    </a>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-tag">✦ Recursos gratuitos para emprendedores</div>
+    <h1>Herramientas que te ayudan<br>a <em>tomar mejores decisiones</em></h1>
+    <div class="divider"></div>
+    <p class="hero-sub">Calculadoras y simuladores simples para que entiendas tus números sin ser experto en finanzas ni tecnología.</p>
+  </div>
+
+  <div class="tools-grid">
+
+    <a class="tool-card" href="./calculadora-aliados/">
+      <div class="tool-icon">💰</div>
+      <span class="tool-badge badge-free">Gratis</span>
+      <div class="tool-name">Calculadora de comisiones para aliados</div>
+      <div class="tool-desc">Descubre cuánto puedes ganar refiriendo clientes a Ferova. Resultado inmediato en USD, COP, BRL o EUR.</div>
+      <div class="tool-cta">Abrir herramienta <span class="arrow">→</span></div>
+    </a>
+
+    <div class="tool-card coming-soon">
+      <div class="tool-icon">📊</div>
+      <span class="tool-badge badge-soon">Próximamente</span>
+      <div class="tool-name">Diagnóstico de rentabilidad</div>
+      <div class="tool-desc">Ingresa tus ingresos y costos y descubre si tu negocio es rentable, está en riesgo o en pérdida.</div>
+      <div class="tool-cta">Próximamente</div>
+    </div>
+
+    <div class="tool-card coming-soon">
+      <div class="tool-icon">🧮</div>
+      <span class="tool-badge badge-soon">Próximamente</span>
+      <div class="tool-name">Calculadora de inversión inicial</div>
+      <div class="tool-desc">Estima cuánto necesitas para lanzar tu negocio digital y cuándo empezarás a recuperar tu inversión.</div>
+      <div class="tool-cta">Próximamente</div>
+    </div>
+
+    <div class="tool-card coming-soon">
+      <div class="tool-icon">✅</div>
+      <span class="tool-badge badge-soon">Próximamente</span>
+      <div class="tool-name">Test de viabilidad de negocio</div>
+      <div class="tool-desc">5 preguntas clave para saber si tu idea de negocio tiene potencial real antes de invertir.</div>
+      <div class="tool-cta">Próximamente</div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p>¿Tienes una idea de negocio digital? Hablemos.</p>
+    <a class="wa-btn" href="https://wa.me/17865787672" target="_blank">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Escríbenos por WhatsApp
+    </a>
+    <p class="footer-copy">© 2026 Ferova Agency · Todos los derechos reservados</p>
+  </div>
+
+</div>
+</body>
+</html>
