@@ -3,368 +3,551 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Recursos Gratuitos para Emprendedores · Ferova Agency</title>
-
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230d1b2a'/><text y='.9em' font-size='70' x='12'>🚀</text></svg>">
-
-<meta name="description" content="Herramientas gratuitas para emprendedores digitales. Calculadoras, diagnósticos y simuladores creados por Ferova Agency.">
-<meta property="og:title" content="Recursos gratuitos para emprendedores · Ferova Agency">
-<meta property="og:description" content="Calculadoras y herramientas para tomar mejores decisiones en tu negocio digital.">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Ferova Agency">
-
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+<title>Briefing Semanal · SEO para Ecommerce</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --navy: #0d1b2a;
-    --gold: #c9a84c;
-    --gold-light: #e8c97a;
-    --white: #ffffff;
-    --text-muted: #7a8a9a;
-    --border: rgba(201,168,76,0.2);
-    --radius: 16px;
-  }
+:root {
+  --bg: #f5f2ed;
+  --surface: #ffffff;
+  --ink: #1a1814;
+  --ink2: #5a5650;
+  --ink3: #9a9690;
+  --gold: #c17f24;
+  --gold-bg: #fef8ee;
+  --pro: #1a3a5c;
+  --pro-bg: #eef4fb;
+  --free-bg: #edf7f0;
+  --free: #1a5c3a;
+  --li-bg: #f0f4fb;
+  --li: #1a2f5c;
+  --border: rgba(26,24,20,0.1);
+  --radius: 14px;
+}
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--navy);
-    color: var(--white);
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  min-height: 100vh;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231a1814' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
 
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background:
-      radial-gradient(ellipse 80% 50% at 10% 0%, rgba(201,168,76,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse 60% 70% at 90% 100%, rgba(201,168,76,0.05) 0%, transparent 60%);
-    pointer-events: none;
-    z-index: 0;
-  }
+.app { max-width: 900px; margin: 0 auto; padding: 40px 20px 80px; }
 
-  .wrapper {
-    position: relative;
-    z-index: 1;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 56px 24px 80px;
-  }
+header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
 
-  /* Nav */
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 72px;
-  }
+.brand h1 {
+  font-family: 'Fraunces', serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.1;
+}
 
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-  }
+.brand p {
+  font-size: 13px;
+  color: var(--ink3);
+  margin-top: 4px;
+}
 
-  .logo-dot {
-    width: 8px; height: 8px;
-    background: var(--gold);
-    border-radius: 50%;
-  }
+.date-badge {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gold);
+  background: var(--gold-bg);
+  border: 0.5px solid rgba(193,127,36,0.3);
+  border-radius: 100px;
+  padding: 5px 14px;
+  white-space: nowrap;
+}
 
-  .logo span {
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--gold);
-  }
+.generate-btn {
+  width: 100%;
+  padding: 16px 24px;
+  background: var(--ink);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: opacity 0.2s, transform 0.15s;
+  margin-bottom: 32px;
+}
 
-  .nav-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--text-muted);
-    text-decoration: none;
-    padding: 8px 16px;
-    border: 0.5px solid var(--border);
-    border-radius: 100px;
-    transition: all 0.2s;
-  }
+.generate-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+.generate-btn:active { transform: scale(0.99); }
+.generate-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
 
-  .nav-cta:hover {
-    color: var(--gold-light);
-    border-color: rgba(201,168,76,0.5);
-    background: rgba(201,168,76,0.06);
-  }
+.spinner {
+  width: 16px; height: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: none;
+}
 
-  /* Hero */
-  .hero {
-    text-align: center;
-    margin-bottom: 64px;
-    animation: fadeUp 0.5s ease both;
-  }
+@keyframes spin { to { transform: rotate(360deg); } }
 
-  .hero-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--gold);
-    padding: 6px 16px;
-    border: 0.5px solid var(--border);
-    border-radius: 100px;
-    background: rgba(201,168,76,0.06);
-    margin-bottom: 28px;
-  }
+.progress-bar {
+  width: 100%;
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  margin-bottom: 32px;
+  overflow: hidden;
+  display: none;
+}
 
-  h1 {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(36px, 6vw, 60px);
-    line-height: 1.08;
-    margin-bottom: 20px;
-  }
+.progress-fill {
+  height: 100%;
+  background: var(--gold);
+  border-radius: 2px;
+  width: 0%;
+  transition: width 0.4s ease;
+}
 
-  h1 em {
-    font-style: italic;
-    color: var(--gold-light);
-  }
+.status-text {
+  font-size: 13px;
+  color: var(--ink3);
+  text-align: center;
+  margin-bottom: 24px;
+  display: none;
+  font-style: italic;
+}
 
-  .hero-sub {
-    font-size: 16px;
-    color: var(--text-muted);
-    line-height: 1.7;
-    max-width: 520px;
-    margin: 0 auto;
-  }
+.output { display: none; }
 
-  .divider {
-    width: 48px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    margin: 24px auto;
-  }
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  margin-top: 32px;
+}
 
-  /* Grid de herramientas */
-  .tools-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 16px;
-    margin-bottom: 48px;
-  }
+.section-label:first-child { margin-top: 0; }
 
-  .tool-card {
-    background: rgba(255,255,255,0.03);
-    border: 0.5px solid var(--border);
-    border-radius: var(--radius);
-    padding: 28px;
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    transition: all 0.22s;
-    animation: fadeUp 0.4s ease both;
-  }
+.section-badge {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 100px;
+}
 
-  .tool-card:nth-child(1) { animation-delay: 0.1s; }
-  .tool-card:nth-child(2) { animation-delay: 0.18s; }
-  .tool-card:nth-child(3) { animation-delay: 0.26s; }
-  .tool-card:nth-child(4) { animation-delay: 0.34s; }
+.badge-pro { background: var(--pro-bg); color: var(--pro); }
+.badge-free { background: var(--free-bg); color: var(--free); }
+.badge-li { background: var(--li-bg); color: var(--li); }
+.badge-neutral { background: #f0ece6; color: var(--ink2); }
 
-  .tool-card:hover {
-    background: rgba(201,168,76,0.06);
-    border-color: rgba(201,168,76,0.4);
-    transform: translateY(-2px);
-  }
+.section-line { flex: 1; height: 0.5px; background: var(--border); }
 
-  .tool-card.coming-soon {
-    opacity: 0.45;
-    pointer-events: none;
-  }
+.news-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 8px; }
+@media(max-width:580px){ .news-grid { grid-template-columns: 1fr; } }
 
-  .tool-icon {
-    font-size: 28px;
-    line-height: 1;
-  }
+.news-card {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+}
 
-  .tool-badge {
-    display: inline-block;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 3px 10px;
-    border-radius: 100px;
-    width: fit-content;
-  }
+.news-tag {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
 
-  .badge-free {
-    background: rgba(46,204,138,0.12);
-    color: #2ecc8a;
-  }
+.news-title {
+  font-family: 'Fraunces', serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 8px;
+  color: var(--ink);
+}
 
-  .badge-soon {
-    background: rgba(201,168,76,0.12);
-    color: var(--gold);
-  }
+.news-body {
+  font-size: 13px;
+  color: var(--ink2);
+  line-height: 1.6;
+}
 
-  .tool-name {
-    font-family: 'DM Serif Display', serif;
-    font-size: 20px;
-    line-height: 1.2;
-    color: var(--white);
-  }
+.newsletter-block {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 12px;
+}
 
-  .tool-desc {
-    font-size: 13px;
-    color: var(--text-muted);
-    line-height: 1.6;
-    flex: 1;
-  }
+.nl-header {
+  padding: 14px 18px;
+  border-bottom: 0.5px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
 
-  .tool-cta {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--gold);
-    margin-top: 4px;
-  }
+.nl-header-left { display: flex; align-items: center; gap: 10px; }
 
-  .arrow {
-    transition: transform 0.2s;
-  }
+.nl-type {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
 
-  .tool-card:hover .arrow {
-    transform: translateX(4px);
-  }
+.nl-type.pro { color: var(--pro); }
+.nl-type.free { color: var(--free); }
 
-  /* Footer */
-  .footer {
-    text-align: center;
-    padding-top: 48px;
-    border-top: 0.5px solid var(--border);
-  }
+.nl-title-small {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+}
 
-  .footer p {
-    font-size: 13px;
-    color: var(--text-muted);
-    margin-bottom: 16px;
-  }
+.copy-btn {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ink3);
+  background: var(--bg);
+  border: 0.5px solid var(--border);
+  border-radius: 8px;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
 
-  .wa-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--white);
-    background: rgba(37,211,102,0.12);
-    border: 0.5px solid rgba(37,211,102,0.3);
-    border-radius: 100px;
-    padding: 10px 22px;
-    text-decoration: none;
-    transition: all 0.2s;
-  }
+.copy-btn:hover { color: var(--ink); border-color: var(--ink2); }
+.copy-btn.copied { color: var(--free); border-color: var(--free); }
 
-  .wa-btn:hover {
-    background: rgba(37,211,102,0.2);
-    border-color: rgba(37,211,102,0.5);
-  }
+.nl-body {
+  padding: 18px;
+  font-size: 13px;
+  color: var(--ink2);
+  line-height: 1.75;
+  white-space: pre-wrap;
+}
 
-  .footer-copy {
-    margin-top: 28px;
-    font-size: 12px;
-    color: rgba(122,138,154,0.5);
-  }
+.nl-body strong { color: var(--ink); font-weight: 500; }
 
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(14px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+.li-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
 
-  @media (max-width: 480px) {
-    .tools-grid { grid-template-columns: 1fr; }
-    nav { flex-direction: column; gap: 16px; align-items: flex-start; }
-  }
+.li-card {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.li-card-header {
+  padding: 10px 16px;
+  background: var(--li-bg);
+  border-bottom: 0.5px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.li-day {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--li);
+}
+
+.li-body {
+  padding: 14px 16px;
+  font-size: 13px;
+  color: var(--ink2);
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--ink3);
+}
+
+.empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.4;
+}
+
+.empty-state h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--ink2);
+  margin-bottom: 8px;
+}
+
+.empty-state p { font-size: 14px; line-height: 1.6; }
+
+.topics-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.topic-pill {
+  font-size: 12px;
+  color: var(--ink2);
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: 100px;
+  padding: 5px 14px;
+}
+
+.error-box {
+  background: #fff5f5;
+  border: 0.5px solid #fca5a5;
+  border-radius: var(--radius);
+  padding: 16px;
+  font-size: 13px;
+  color: #991b1b;
+  display: none;
+}
+
+.section-hint {
+  font-size: 12px;
+  color: var(--ink3);
+  margin: -8px 0 14px;
+  font-style: italic;
+}
+
+.count-badge {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ink3);
+  white-space: nowrap;
+}
+
+.news-source {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink3);
+  margin-bottom: 6px;
+}
+
+.news-reason {
+  font-size: 12px;
+  margin-top: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  line-height: 1.5;
+}
+
+.reason-pro { background: var(--pro-bg); color: var(--pro); }
+.reason-gratis { background: var(--free-bg); color: var(--free); }
+.reason-li { background: var(--li-bg); color: var(--li); }
 </style>
 </head>
 <body>
-<div class="wrapper">
+<div class="app">
 
-  <nav>
-    <a class="logo" href="#">
-      <div class="logo-dot"></div>
-      <span>Ferova Agency</span>
-    </a>
-    <a class="nav-cta" href="https://wa.me/17865787672" target="_blank">
-      ¿Necesitas una WebApp? →
-    </a>
-  </nav>
+  <header>
+    <div class="brand">
+      <h1>Briefing Semanal</h1>
+      <p>SEO para Ecommerce · Generado con IA</p>
+    </div>
+    <div class="date-badge" id="dateBadge">Cargando fecha...</div>
+  </header>
 
-  <div class="hero">
-    <div class="hero-tag">✦ Recursos gratuitos para emprendedores</div>
-    <h1>Herramientas que te ayudan<br>a <em>tomar mejores decisiones</em></h1>
-    <div class="divider"></div>
-    <p class="hero-sub">Calculadoras y simuladores simples para que entiendas tus números sin ser experto en finanzas ni tecnología.</p>
+  <div class="topics-row">
+    <span class="topic-pill">📡 SEO técnico & Google</span>
+    <span class="topic-pill">🤖 IA aplicada a marketing</span>
+    <span class="topic-pill">🛒 E-commerce LATAM</span>
+    <span class="topic-pill">🛠 Herramientas nuevas</span>
+    <span class="topic-pill">📊 Casos de estudio</span>
   </div>
 
-  <div class="tools-grid">
+  <button class="generate-btn" id="generateBtn" onclick="generateBriefing()">
+    <div class="spinner" id="spinner"></div>
+    <span id="btnText">✦ Generar briefing de esta semana</span>
+  </button>
 
-    <a class="tool-card" href="./calculadora-aliados/">
-      <div class="tool-icon">💰</div>
-      <span class="tool-badge badge-free">Gratis</span>
-      <div class="tool-name">Calculadora de comisiones para aliados</div>
-      <div class="tool-desc">Descubre cuánto puedes ganar refiriendo clientes a Ferova. Resultado inmediato en USD, COP, BRL o EUR.</div>
-      <div class="tool-cta">Abrir herramienta <span class="arrow">→</span></div>
-    </a>
-
-    <div class="tool-card coming-soon">
-      <div class="tool-icon">📊</div>
-      <span class="tool-badge badge-soon">Próximamente</span>
-      <div class="tool-name">Diagnóstico de rentabilidad</div>
-      <div class="tool-desc">Ingresa tus ingresos y costos y descubre si tu negocio es rentable, está en riesgo o en pérdida.</div>
-      <div class="tool-cta">Próximamente</div>
-    </div>
-
-    <div class="tool-card coming-soon">
-      <div class="tool-icon">🧮</div>
-      <span class="tool-badge badge-soon">Próximamente</span>
-      <div class="tool-name">Calculadora de inversión inicial</div>
-      <div class="tool-desc">Estima cuánto necesitas para lanzar tu negocio digital y cuándo empezarás a recuperar tu inversión.</div>
-      <div class="tool-cta">Próximamente</div>
-    </div>
-
-    <div class="tool-card coming-soon">
-      <div class="tool-icon">✅</div>
-      <span class="tool-badge badge-soon">Próximamente</span>
-      <div class="tool-name">Test de viabilidad de negocio</div>
-      <div class="tool-desc">5 preguntas clave para saber si tu idea de negocio tiene potencial real antes de invertir.</div>
-      <div class="tool-cta">Próximamente</div>
-    </div>
-
+  <div class="progress-bar" id="progressBar">
+    <div class="progress-fill" id="progressFill"></div>
   </div>
+  <div class="status-text" id="statusText"></div>
+  <div class="error-box" id="errorBox"></div>
 
-  <div class="footer">
-    <p>¿Tienes una idea de negocio digital? Hablemos.</p>
-    <a class="wa-btn" href="https://wa.me/17865787672" target="_blank">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-      Escríbenos por WhatsApp
-    </a>
-    <p class="footer-copy">© 2026 Ferova Agency · Todos los derechos reservados</p>
+  <div class="output" id="output">
+
+    <div class="section-label">
+      <span class="section-badge badge-pro">Newsletter Pro · Solo suscriptores pagos</span>
+      <div class="section-line"></div>
+      <span class="count-badge" id="proCount"></span>
+    </div>
+    <p class="section-hint">Informacion estrategica y accionable. Vale la pena pagar por esto.</p>
+    <div class="news-grid" id="proGrid"></div>
+
+    <div class="section-label">
+      <span class="section-badge badge-free">Newsletter Gratis · Todos los suscriptores</span>
+      <div class="section-line"></div>
+      <span class="count-badge" id="gratisCount"></span>
+    </div>
+    <p class="section-hint">Informacion util y relevante. Buenas practicas y tendencias.</p>
+    <div class="news-grid" id="gratisGrid"></div>
+
+    <div class="section-label">
+      <span class="section-badge badge-li">Posts LinkedIn · Novedades y debate</span>
+      <div class="section-line"></div>
+      <span class="count-badge" id="liCount"></span>
+    </div>
+    <p class="section-hint">Noticias llamativas que generan conversacion e interaccion.</p>
+    <div class="news-grid" id="liGrid"></div>
+
+  </div></div>
+
+  <div class="empty-state" id="emptyState">
+    <div class="empty-icon">📰</div>
+    <h2>Tu briefing semanal te espera</h2>
+    <p>Presiona el botón para que la IA busque las noticias<br>de la semana y prepare todo tu contenido.</p>
   </div>
 
 </div>
+
+<script>
+const months = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+
+const BACKEND_URL = 'https://recursos-y-herramientas-web.vercel.app/api/briefing';
+
+function setDate() {
+  const now = new Date();
+  document.getElementById('dateBadge').textContent = 'Semana del ' + now.getDate() + ' de ' + months[now.getMonth()] + ' ' + now.getFullYear();
+}
+setDate();
+
+function setProgress(pct, text) {
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('statusText').textContent = text;
+}
+
+function showError(msg) {
+  const box = document.getElementById('errorBox');
+  box.textContent = 'Error: ' + msg;
+  box.style.display = 'block';
+}
+
+async function generateBriefing() {
+  const btn = document.getElementById('generateBtn');
+  const spinner = document.getElementById('spinner');
+  const btnText = document.getElementById('btnText');
+  const progressBar = document.getElementById('progressBar');
+  const statusText = document.getElementById('statusText');
+  const errorBox = document.getElementById('errorBox');
+
+  btn.disabled = true;
+  spinner.style.display = 'block';
+  btnText.textContent = 'Buscando noticias...';
+  progressBar.style.display = 'block';
+  statusText.style.display = 'block';
+  errorBox.style.display = 'none';
+  document.getElementById('emptyState').style.display = 'none';
+  document.getElementById('output').style.display = 'none';
+
+  const now = new Date();
+  const weekStr = 'semana del ' + now.getDate() + ' de ' + months[now.getMonth()] + ' de ' + now.getFullYear();
+
+  try {
+    setProgress(20, 'Buscando noticias de SEO, IA y ecommerce...');
+
+    const res = await fetch(BACKEND_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ weekStr: weekStr })
+    });
+
+    setProgress(80, 'Clasificando noticias...');
+
+    if (!res.ok) {
+      const err = await res.json();
+      throw new Error(err.error || 'Error del servidor');
+    }
+
+    const data = await res.json();
+    renderResults(data);
+    setProgress(100, 'Listo');
+
+    setTimeout(function() {
+      document.getElementById('output').style.display = 'block';
+      progressBar.style.display = 'none';
+      statusText.style.display = 'none';
+      btn.disabled = false;
+      spinner.style.display = 'none';
+      btnText.textContent = '↻ Buscar nuevas noticias';
+    }, 400);
+
+  } catch(err) {
+    showError(err.message + '. Intenta de nuevo.');
+    btn.disabled = false;
+    spinner.style.display = 'none';
+    btnText.textContent = '✦ Generar briefing de esta semana';
+    progressBar.style.display = 'none';
+    statusText.style.display = 'none';
+    document.getElementById('emptyState').style.display = 'block';
+  }
+}
+
+function renderResults(data) {
+  renderSection('proGrid', data.pro || [], 'pro');
+  renderSection('gratisGrid', data.gratis || [], 'gratis');
+  renderSection('liGrid', data.linkedin || [], 'linkedin');
+  document.getElementById('proCount').textContent = (data.pro || []).length + ' noticias';
+  document.getElementById('gratisCount').textContent = (data.gratis || []).length + ' noticias';
+  document.getElementById('liCount').textContent = (data.linkedin || []).length + ' noticias';
+}
+
+function renderSection(gridId, items, type) {
+  const grid = document.getElementById(gridId);
+  if (!items.length) {
+    grid.innerHTML = '<div class="news-card"><div class="news-body" style="color:var(--ink3)">Sin noticias en esta categoria esta semana.</div></div>';
+    return;
+  }
+  grid.innerHTML = items.map(function(n) {
+    var extra = '';
+    if (type === 'pro') extra = '<div class="news-reason reason-pro">Por que es PRO: ' + (n.por_que_pro || '') + '</div>';
+    if (type === 'gratis') extra = '<div class="news-reason reason-gratis">Por que va en gratis: ' + (n.por_que_gratis || '') + '</div>';
+    if (type === 'linkedin') extra = '<div class="news-reason reason-li">Angulo para el post: ' + (n.angulo || '') + '</div>';
+    return '<div class="news-card">' +
+      '<div class="news-source">' + (n.fuente || '') + '</div>' +
+      '<div class="news-title">' + (n.titulo || '') + '</div>' +
+      '<div class="news-body">' + (n.resumen || '') + '</div>' +
+      extra +
+      '</div>';
+  }).join('');
+}
+</script>
 </body>
 </html>
